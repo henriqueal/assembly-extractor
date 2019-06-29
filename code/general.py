@@ -50,7 +50,7 @@ def func2():
 				##continue
 			list_dict = ext.extract(path_assembly+str(i+1)+".0.galo")
 			f.close();
-			mylist.append(str(i)+showDict(list_dict)+latency)
+			mylist.append(str(i+1)+","+showDict(list_dict)+latency)
 		else:
 			con += 1	
 	print con
