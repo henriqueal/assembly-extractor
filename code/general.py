@@ -39,7 +39,7 @@ def func2():
 	mylist = []
 	#mylist.append(['add0', 'mul0', 'ld0', 'st0', 'misc0', 'add1', 'mul1', 'ld1', 'st1', 'misc1', 'add2', 'mul2', 'ld2', 'st2', 'misc2', 'add3', 'mul3', 'ld3', 'st3', 'misc3']);
 	path_root = '/home/henrique/Documentos/'
-	file = 'DSP_q15tofl_c/'
+	file = 'DSP_w_vec_c/'
 	path_assembly = path_root + 'assembly/' + file
 	path_latency = path_root + 'latency/' + file
 	con = 0
