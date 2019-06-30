@@ -38,8 +38,10 @@ def func1 (path):
 def func2():
 	mylist = []
 	#mylist.append(['add0', 'mul0', 'ld0', 'st0', 'misc0', 'add1', 'mul1', 'ld1', 'st1', 'misc1', 'add2', 'mul2', 'ld2', 'st2', 'misc2', 'add3', 'mul3', 'ld3', 'st3', 'misc3']);
-	path_assembly = '/home/henrique/Documentos/assembly/DSP_autocor_c/'
-	path_latency = '/home/henrique/Documentos/latency/DSP_autocor_c/'
+	path_root = '/home/henrique/Documentos/'
+	file = 'DSP_q15tofl_c/'
+	path_assembly = path_root + 'assembly/' + file
+	path_latency = path_root + 'latency/' + file
 	con = 0
 	for i in range(1000):
 		exists = os.path.isfile(path_assembly + str(i+1) + ".0.galo");
@@ -55,7 +57,8 @@ def func2():
 			con += 1	
 	print con
 
-	fw = open("/home/henrique/Documentos/assembly-extractor/out/DSP_autocor_c/output.txt", "a")
+	
+	fw = open(path_root + "assembly-extractor/out/" + file + "output.txt", "a")
 	for i in mylist:
 		fw.write(i)
 		fw.write("\n")
