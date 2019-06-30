@@ -40,8 +40,13 @@ def extract(filename):
 	
 	for line in lines:
 		#condicao de parada do arquivo
-		if(line.startswith('\n')):
+		if(line.startswith('\t.ident')):
 			break;
+
+		#condicao de parada do arquivo
+		if(line.startswith('\n')):
+			continue;
+			#break;
 		
 		#Vou ler as linhas ate achar o comeco do codigo
 		if(flagBeginCode == False):		
@@ -50,8 +55,8 @@ def extract(filename):
 		#depois que comecar eu vou fazer o processamento
 		else:
 		
-			if("end" in line):
-				break;
+			#if("end" in line):
+				#break;
 				
 			# preciso encontrar um header
 			if not line.startswith('\t'):
