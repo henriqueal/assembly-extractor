@@ -39,9 +39,14 @@ def extract(filename):
 	dict = {0:{}};
 	
 	for line in lines:
+
+		if(".indent" in line):
+			break;
+		
 		#condicao de parada do arquivo
 		if(line.startswith('\n')):
-			break;
+			continue;
+			#break;
 		
 		#Vou ler as linhas ate achar o comeco do codigo
 		if(flagBeginCode == False):		
@@ -49,9 +54,9 @@ def extract(filename):
 				flagBeginCode = True;
 		#depois que comecar eu vou fazer o processamento
 		else:
-		
-			if("end" in line):
-				break;
+
+			#if("end" in line):
+				#break;
 				
 			# preciso encontrar um header
 			if not line.startswith('\t'):
